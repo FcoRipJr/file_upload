@@ -39,3 +39,5 @@ if (!empty($_FILES["arquivo"])) {
 ?>
 <br>
 <a href="index.php">voltar</a>
+<br>
+<a href="dashboard.php">ver arquivos</a>
