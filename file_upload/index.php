@@ -18,6 +18,6 @@
 		<input type="submit" name="submit" value="Enviar">
 	</form>
 
-	<a href="dashboard.php">arquivos</a>
+	<a href="dashboard.php">ver arquivos</a>
 </body>
 </html>
