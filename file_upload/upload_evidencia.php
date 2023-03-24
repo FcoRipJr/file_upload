@@ -20,7 +20,8 @@ if (!empty($_FILES["arquivo"])) {
     if (in_array(strtolower(pathinfo($_FILES["arquivo"]["name"], PATHINFO_EXTENSION)), $extensoes_permitidas)) {
         
         if ($_FILES["arquivo"]["size"] <= $tamanho_maximo) {
-            $nome_arquivo = $usuario . '_' . $resposta . '_' . date('Y_m_d') . '.' . pathinfo($_FILES["arquivo"]["name"], PATHINFO_EXTENSION);
+            date_default_timezone_set('America/Manaus');
+            $nome_arquivo = $usuario . '_' . $resposta . '_' . date('Y_m_d_h_i_s') . '.' . pathinfo($_FILES["arquivo"]["name"], PATHINFO_EXTENSION);
 
             if (move_uploaded_file($_FILES["arquivo"]["tmp_name"], $dir . $nome_arquivo)) {
                 echo "Arquivo enviado com sucesso.";
