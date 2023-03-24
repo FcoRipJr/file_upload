@@ -18,7 +18,7 @@
     <?php foreach ($evidencias as $evidencia) { 
         $href = $dir.$evidencia;
         ?>
-        <li id='evidencia_<?= $evidencia ?>'><a href="<?= $href?>"><?= $evidencia ?></a></li>
+        <li id='evidencia_<?= $evidencia ?>'><a href="<?= $href?>"  target="_blank"><?= $evidencia ?></a></li>
     <?php } ?>
 </ul>
 <a onclick="render_respostas(<?= $_GET['usuario']??''?>)">voltar</a>
