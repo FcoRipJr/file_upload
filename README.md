@@ -19,3 +19,27 @@ if (isset($_GET['filename'])) {
 ?>
 
 ```
+
+
+```
+<?php
+$extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
+
+if ($extensao == "pdf") {
+    $classe = "pdf";
+    $icone = "fa-file-pdf-o";
+} elseif ($extensao == "jpg" || $extensao == "jpeg" || $extensao == "png") {
+    $classe = "imagem";
+    $icone = "fa-file-image-o";
+} elseif ($extensao == "doc" || $extensao == "docx") {
+    $classe = "word";
+    $icone = "fa-file-word-o";
+} else {
+    $classe = "outro";
+    $icone = "fa-file-o";
+}
+
+echo "<i class='fa " . $icone . " " . $classe . "'></i>";
+?>
+
+```
